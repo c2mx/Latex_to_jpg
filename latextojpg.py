@@ -14,12 +14,14 @@ def trim(im2):
 
 
 def latex2jpg(latex, jpgname):
+    """执行环境影响，若在中文win系统下，可使用这一段更改字体
     config = {
         "font.family": 'serif',
         "mathtext.fontset": 'stix',
         "font.serif": ['SimSun']
     }
     rcParams.update(config)
+    """
     fig = plt.figure(figsize=(20, 10), dpi=300)
     ax = fig.add_axes([0, 0, 1, 1])
     ax.get_xaxis().set_visible(False)
